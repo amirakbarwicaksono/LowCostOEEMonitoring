@@ -16,4 +16,5 @@ This project is a application for monitoring OEE as Real Time.
 Requerement:
 - PostgreSQL database
 - Raspberry Pi as IoT Device
+- Node-Red (End-User), Grafana (Monitoring)
 - Relays in each machine for getting: loading time, stop time, Output, Defect.
