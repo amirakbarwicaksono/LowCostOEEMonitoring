@@ -1,0 +1,1987 @@
+[
+    {
+        "id": "244432a51bdc725e",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2acd2581fafa8a7e",
+        "type": "tab",
+        "label": "Simulation",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "75d586248c9b1c29",
+        "type": "ui_group",
+        "name": "Control Simulation",
+        "tab": "dc2a4420aa637e57",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d39353cd.91093",
+        "type": "postgresDB",
+        "name": "postgres@127.0.0.1:5432/OEE",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "OEE",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "max": "10",
+        "maxFieldType": "num",
+        "min": "1",
+        "minFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "123456",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "c9b1124cd454a72e",
+        "type": "ui_group",
+        "name": "QR Code Product",
+        "tab": "dc2a4420aa637e57",
+        "order": 2,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5d6156e12dadf964",
+        "type": "ui_group",
+        "name": "QR Code Stop Category",
+        "tab": "dc2a4420aa637e57",
+        "order": 3,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dc2a4420aa637e57",
+        "type": "ui_tab",
+        "name": "Control Simulation",
+        "icon": "devices",
+        "order": 9,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8e68e458fe91d8b5",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "11560a74a887fc2a",
+        "type": "ui_switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "label": "Relay START (Working Time)",
+        "tooltip": "",
+        "group": "75d586248c9b1c29",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 620,
+        "wires": [
+            [
+                "4579c03ddb825c17",
+                "38238792faae83a1"
+            ]
+        ]
+    },
+    {
+        "id": "618c36a41c556a71",
+        "type": "ui_switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "label": "Relay STOP (Trouble Time)",
+        "tooltip": "",
+        "group": "75d586248c9b1c29",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 980,
+        "wires": [
+            [
+                "9c7505e53f37a9e8",
+                "230af261fe46bd24"
+            ]
+        ]
+    },
+    {
+        "id": "de8e33287a2b4a18",
+        "type": "ui_button",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "group": "75d586248c9b1c29",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Relay OUTPUT (Counter)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 1240,
+        "wires": [
+            [
+                "d30a4904a88e6741"
+            ]
+        ]
+    },
+    {
+        "id": "d4bfe17b3488c357",
+        "type": "ui_button",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "group": "75d586248c9b1c29",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Relay DEFECT (Counter)",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 1580,
+        "wires": [
+            [
+                "51f86349f59d4840"
+            ]
+        ]
+    },
+    {
+        "id": "9d423212f61f84c9",
+        "type": "inject",
+        "z": "2acd2581fafa8a7e",
+        "name": "Init empty",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "708fde7c7f436569"
+            ]
+        ]
+    },
+    {
+        "id": "708fde7c7f436569",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Ambil machine_name",
+        "query": "SELECT machine_name FROM machine_master order by machine_name;",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "eed9a1d700172dad"
+            ]
+        ]
+    },
+    {
+        "id": "eed9a1d700172dad",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "create array",
+        "func": "\nvar i;\nlist_machine = [];\nfor (i = 0; i < msg.payload.rows.length; i++) \n{\n  list_machine.push({\"machine\":msg.payload.rows[i]['machine_name']});\n}\n\nmsg.payload = list_machine;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 180,
+        "wires": [
+            [
+                "f8dd7f3c3f281fde"
+            ]
+        ]
+    },
+    {
+        "id": "f8dd7f3c3f281fde",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "format array of objects for dropdown in dashboard",
+        "func": "//Reformat array to work with dashboard\nvar reformattedArray = msg.payload.map(obj =>{\n    //declare the reformatted object\n    var rObj = {};\n    //format it for drop down\n    //\"label\":\"value\" is the format so lets move the value to the label and add some txt as well\n    //you can also replce the txt with a var if you want\n    rObj[obj.machine] = obj.machine;\n    return rObj;\n});\nmsg.payload =  reformattedArray;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 180,
+        "wires": [
+            [
+                "4109d427fed69688"
+            ]
+        ]
+    },
+    {
+        "id": "4109d427fed69688",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "b84b55ff69f76d0b"
+            ]
+        ]
+    },
+    {
+        "id": "b84b55ff69f76d0b",
+        "type": "ui_dropdown",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "label": "Select Machine",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "75d586248c9b1c29",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 540,
+        "y": 220,
+        "wires": [
+            [
+                "9bdfa012654ae4ae"
+            ]
+        ]
+    },
+    {
+        "id": "9bdfa012654ae4ae",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "query": "SELECT machine_name,id_machine,machine_no,status_start, status_stop FROM machine_master where machine_name='{{msg.payload}}';",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "8477506fe7390233",
+                "d9db440a0507ec42",
+                "8d9d717a052cd449"
+            ]
+        ]
+    },
+    {
+        "id": "8477506fe7390233",
+        "type": "ui_text",
+        "z": "2acd2581fafa8a7e",
+        "group": "75d586248c9b1c29",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ID Machine: ",
+        "format": "{{msg.payload.rows[0]['id_machine']}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 950,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d9db440a0507ec42",
+        "type": "ui_text",
+        "z": "2acd2581fafa8a7e",
+        "group": "75d586248c9b1c29",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Machine Name: ",
+        "format": "{{msg.payload.rows[0]['machine_name']}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 960,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c3ec51242211206e",
+        "type": "inject",
+        "z": "2acd2581fafa8a7e",
+        "name": "Init empty",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "876026a6d872f89d",
+                "4d2eb785bb95884d"
+            ]
+        ]
+    },
+    {
+        "id": "876026a6d872f89d",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Ambil qr code",
+        "query": "SELECT a.rfid,a.type_card,b.type,b.ct FROM list_rfid a inner join list_ct b on a.id_type=b.id_type \nwhere a.type_card='Product' order by a.id_type ;",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "fdb0951c4ffeef47"
+            ]
+        ]
+    },
+    {
+        "id": "fdb0951c4ffeef47",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "create array",
+        "func": "\nvar i;\nlist_stop = [];\nfor (i = 0; i < msg.payload.rows.length; i++) \n{\n  list_stop.push({\"QR Code\":msg.payload.rows[i]['rfid'],\n    \"Type Product\":msg.payload.rows[i]['type'],\n    \"Cycle Time\":msg.payload.rows[i]['ct']});\n}\n\nmsg.payload = list_stop;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "073b32d5fc2dd844"
+            ]
+        ]
+    },
+    {
+        "id": "073b32d5fc2dd844",
+        "type": "ui_table",
+        "z": "2acd2581fafa8a7e",
+        "group": "c9b1124cd454a72e",
+        "name": "Table QR Code List Product",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "columns": [],
+        "outputs": 1,
+        "cts": true,
+        "x": 780,
+        "y": 320,
+        "wires": [
+            [
+                "f43200f04941e951"
+            ]
+        ]
+    },
+    {
+        "id": "4d2eb785bb95884d",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Ambil qr code",
+        "query": "SELECT rfid,type_card FROM list_rfid \nwhere id_type=0 ;",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 340,
+        "y": 420,
+        "wires": [
+            [
+                "7559ccb2b7d466e4"
+            ]
+        ]
+    },
+    {
+        "id": "7559ccb2b7d466e4",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "create array",
+        "func": "\nvar i;\nlist_stop = [];\nfor (i = 0; i < msg.payload.rows.length; i++) \n{\n  list_stop.push({\"QR Code\":msg.payload.rows[i]['rfid'],\n    \"Stop Category\":msg.payload.rows[i]['type_card']  });\n}\n\nmsg.payload = list_stop;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 420,
+        "wires": [
+            [
+                "365550fd5a5124ae"
+            ]
+        ]
+    },
+    {
+        "id": "365550fd5a5124ae",
+        "type": "ui_table",
+        "z": "2acd2581fafa8a7e",
+        "group": "5d6156e12dadf964",
+        "name": "Table QR Code List Product",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "columns": [],
+        "outputs": 1,
+        "cts": true,
+        "x": 780,
+        "y": 420,
+        "wires": [
+            [
+                "d7a2e784333af817"
+            ]
+        ]
+    },
+    {
+        "id": "81bb2682a5434ab1",
+        "type": "ui_template",
+        "z": "2acd2581fafa8a7e",
+        "group": "c9b1124cd454a72e",
+        "name": "",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<div><i>\n    To change type product, select <b>Input Type & Stop Category</b> page, and select machine<br>\n    Copy QR Code above and input into Form Type OR click QR Code name on table above<br>\n    Click Submit<br>\n    </i>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 720,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6922e7fd72db9f5",
+        "type": "ui_template",
+        "z": "2acd2581fafa8a7e",
+        "group": "5d6156e12dadf964",
+        "name": "",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<div><i>\n    To input stop category, select <b>Input Type & Stop Category</b> page, and select machine<br>\n    Copy QR Code above and input into Form Stop Category OR click QR Code name on table above<br>\n    Click Submit<br>\n    </i>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 720,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f43200f04941e951",
+        "type": "link out",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "3b4439778f129383",
+            "60d870ac4119336f"
+        ],
+        "x": 995,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d7a2e784333af817",
+        "type": "link out",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "b3fa845eefa3280d",
+            "c3b71975dbbb7f8b"
+        ],
+        "x": 995,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8d9d717a052cd449",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id_machine_control",
+                "pt": "global",
+                "to": "payload.rows[0]['id_machine']",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4579c03ddb825c17",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "status_start_control",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "381f8e8d529c2f3a",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Update machine master True",
+        "query": "update machine_master set status_start='True'\nwhere id_machine={{msg.id_machine}}",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 800,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60eca405b93fbfcb",
+        "type": "switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "Check status start",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "6d080920506b69e9"
+            ],
+            [
+                "e2b844b87c98af2f",
+                "030f863aca56472d",
+                "618c36a41c556a71"
+            ]
+        ]
+    },
+    {
+        "id": "38238792faae83a1",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id_machine",
+                "pt": "msg",
+                "to": "id_machine_control",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 620,
+        "wires": [
+            [
+                "60eca405b93fbfcb"
+            ]
+        ]
+    },
+    {
+        "id": "3f8673a2b2458209",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Insert trans_operation",
+        "query": "insert into trans_operation(id_machine) values({{msg.id_machine}});",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 780,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2b844b87c98af2f",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Update machine master False",
+        "query": "update machine_master set status_start='False'\nwhere id_machine={{msg.id_machine}} ;",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 810,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "030f863aca56472d",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Update trans_operation",
+        "query": "update trans_operation set finish=NOW() where id_machine={{msg.id_machine}}\nand finish is NULL;",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 790,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c7505e53f37a9e8",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "status_stop_control",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "230af261fe46bd24",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id_machine",
+                "pt": "msg",
+                "to": "id_machine_control",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "status_start",
+                "pt": "msg",
+                "to": "status_start_control",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 980,
+        "wires": [
+            [
+                "16f63c70a3a62d8c"
+            ]
+        ]
+    },
+    {
+        "id": "16f63c70a3a62d8c",
+        "type": "switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "Check status stop",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 1020,
+        "wires": [
+            [
+                "0564e675038f8fe7"
+            ],
+            [
+                "3b5b5dd4dd3f5f99",
+                "e6c9b56f793c750d"
+            ]
+        ]
+    },
+    {
+        "id": "0564e675038f8fe7",
+        "type": "switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "If ON",
+        "property": "status_start",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 590,
+        "y": 980,
+        "wires": [
+            [
+                "22a0cf1fc569486b"
+            ],
+            [
+                "e6a3582f83e63c8c",
+                "d336de5d2f3af862"
+            ]
+        ]
+    },
+    {
+        "id": "22a0cf1fc569486b",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "func": "\nmsg.payload = \"Machine condition is OFF, please click START button to turn on machine\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 940,
+        "wires": [
+            [
+                "ee689dba3ba266cd",
+                "ddb4c06b65891786"
+            ]
+        ]
+    },
+    {
+        "id": "ee689dba3ba266cd",
+        "type": "ui_toast",
+        "z": "2acd2581fafa8a7e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error",
+        "name": "Error",
+        "x": 870,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "e6a3582f83e63c8c",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Update stop machine master True",
+        "query": "update machine_master set status_stop='True'\nwhere id_machine={{msg.id_machine}}",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 820,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d336de5d2f3af862",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Insert trans_stop",
+        "query": "insert into trans_stop(id_machine) values({{msg.id_machine}});",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 770,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b5b5dd4dd3f5f99",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Update machine master False",
+        "query": "update machine_master set status_stop='False'\nwhere id_machine={{msg.id_machine}} ;",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 650,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e6c9b56f793c750d",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Update trans_operation",
+        "query": "update trans_stop set finish=NOW() where id_machine={{msg.id_machine}}\nand finish is NULL;",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 630,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d30a4904a88e6741",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id_machine",
+                "pt": "msg",
+                "to": "id_machine_control",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "status_start",
+                "pt": "msg",
+                "to": "status_start_control",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "status_stop",
+                "pt": "msg",
+                "to": "status_stop_control",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 1240,
+        "wires": [
+            [
+                "5b6b807522449d0c"
+            ]
+        ]
+    },
+    {
+        "id": "5b6b807522449d0c",
+        "type": "switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "If ON",
+        "property": "status_start",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 1240,
+        "wires": [
+            [
+                "8a650f0ae50fec16"
+            ],
+            [
+                "0eb1cb2f3a27b57a"
+            ]
+        ]
+    },
+    {
+        "id": "8a650f0ae50fec16",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "func": "\nmsg.payload = \"Machine condition is OFF, please click START button to turn on machine\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1200,
+        "wires": [
+            [
+                "d545c31daef324a0"
+            ]
+        ]
+    },
+    {
+        "id": "d545c31daef324a0",
+        "type": "ui_toast",
+        "z": "2acd2581fafa8a7e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error",
+        "name": "Error",
+        "x": 850,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "0eb1cb2f3a27b57a",
+        "type": "switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "Check status stop",
+        "property": "status_stop",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 1300,
+        "wires": [
+            [
+                "b7263e24686e40b5"
+            ],
+            [
+                "9a0f9b517441700f"
+            ]
+        ]
+    },
+    {
+        "id": "b7263e24686e40b5",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "func": "\nmsg.payload = \"Machine condition is STOP, please release STOP button\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1280,
+        "wires": [
+            [
+                "c871740f41cf46c4"
+            ]
+        ]
+    },
+    {
+        "id": "c871740f41cf46c4",
+        "type": "ui_toast",
+        "z": "2acd2581fafa8a7e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error",
+        "name": "Error",
+        "x": 850,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "9a0f9b517441700f",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Check Running Type",
+        "query": "select id_type,ct,qty_perct from machine_master where id_machine={{msg.id_machine}};",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 620,
+        "y": 1340,
+        "wires": [
+            [
+                "a1bd6f773196b346"
+            ]
+        ]
+    },
+    {
+        "id": "d42bec4614a3df85",
+        "type": "switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "property": "payload.rowCount",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 1400,
+        "wires": [
+            [
+                "b48ce970d6f72dce"
+            ],
+            [
+                "f0c55d33b8def7f8"
+            ]
+        ]
+    },
+    {
+        "id": "b48ce970d6f72dce",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "func": "\nmsg.payload = \"Running type in machine have not defined\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1400,
+        "wires": [
+            [
+                "f86773f0ee2318b8"
+            ]
+        ]
+    },
+    {
+        "id": "f86773f0ee2318b8",
+        "type": "ui_toast",
+        "z": "2acd2581fafa8a7e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error",
+        "name": "Error",
+        "x": 850,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "f0c55d33b8def7f8",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Insert trans_output",
+        "query": "insert into trans_output (id_machine,id_type,time,qty,ct,qty_perct) \nvalues({{msg.id_machine}},{{msg.id_type}},now(),1,\n{{msg.ct}},{{msg.qty_perct}})",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 750,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1bd6f773196b346",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id_type",
+                "pt": "msg",
+                "to": "payload.rows[0]['id_type']",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "ct",
+                "pt": "msg",
+                "to": "payload.rows[0]['ct']",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "qty_perct",
+                "pt": "msg",
+                "to": "payload.rows[0]['qty_perct']",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 1340,
+        "wires": [
+            [
+                "d42bec4614a3df85"
+            ]
+        ]
+    },
+    {
+        "id": "51f86349f59d4840",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id_machine",
+                "pt": "msg",
+                "to": "id_machine_control",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "status_start",
+                "pt": "msg",
+                "to": "status_start_control",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "status_stop",
+                "pt": "msg",
+                "to": "status_stop_control",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 1580,
+        "wires": [
+            [
+                "34598e09836c9378"
+            ]
+        ]
+    },
+    {
+        "id": "34598e09836c9378",
+        "type": "switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "If ON",
+        "property": "status_start",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 1580,
+        "wires": [
+            [
+                "b59bcaf65a863180"
+            ],
+            [
+                "e395942f07ddeee5"
+            ]
+        ]
+    },
+    {
+        "id": "b59bcaf65a863180",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "func": "\nmsg.payload = \"Machine condition is OFF, please click START button to turn on machine\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1540,
+        "wires": [
+            [
+                "5921d90cca640328"
+            ]
+        ]
+    },
+    {
+        "id": "5921d90cca640328",
+        "type": "ui_toast",
+        "z": "2acd2581fafa8a7e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error",
+        "name": "Error",
+        "x": 850,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "e395942f07ddeee5",
+        "type": "switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "Check status stop",
+        "property": "status_stop",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 1640,
+        "wires": [
+            [
+                "41fc5c22038ce9c6"
+            ],
+            [
+                "4067410012efc91f"
+            ]
+        ]
+    },
+    {
+        "id": "41fc5c22038ce9c6",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "func": "\nmsg.payload = \"Machine condition is STOP, please release STOP button\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1620,
+        "wires": [
+            [
+                "fe6b7f69177a0dc2"
+            ]
+        ]
+    },
+    {
+        "id": "fe6b7f69177a0dc2",
+        "type": "ui_toast",
+        "z": "2acd2581fafa8a7e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error",
+        "name": "Error",
+        "x": 850,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "4067410012efc91f",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Check Running Type",
+        "query": "select id_type,ct,qty_perct from machine_master where id_machine={{msg.id_machine}};",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 620,
+        "y": 1680,
+        "wires": [
+            [
+                "09867ff109a1d133"
+            ]
+        ]
+    },
+    {
+        "id": "25041390f82014b6",
+        "type": "switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "property": "payload.rowCount",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 1740,
+        "wires": [
+            [
+                "95c8175fe3b76fcf"
+            ],
+            [
+                "870d2ca7482e3780"
+            ]
+        ]
+    },
+    {
+        "id": "95c8175fe3b76fcf",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "func": "\nmsg.payload = \"Running type in machine have not defined\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 1740,
+        "wires": [
+            [
+                "5d37a14045de27c6"
+            ]
+        ]
+    },
+    {
+        "id": "5d37a14045de27c6",
+        "type": "ui_toast",
+        "z": "2acd2581fafa8a7e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error",
+        "name": "Error",
+        "x": 850,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "870d2ca7482e3780",
+        "type": "postgrestor",
+        "z": "2acd2581fafa8a7e",
+        "name": "Insert trans_ng",
+        "query": "insert into trans_ng (id_machine,id_type,time,qty,ct,qty_perct) \nvalues({{msg.id_machine}},{{msg.id_type}},now(),1,\n{{msg.ct}},{{msg.qty_perct}})",
+        "postgresDB": "d39353cd.91093",
+        "output": true,
+        "outputs": 1,
+        "x": 740,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "09867ff109a1d133",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id_type",
+                "pt": "msg",
+                "to": "payload.rows[0]['id_type']",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "ct",
+                "pt": "msg",
+                "to": "payload.rows[0]['ct']",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "qty_perct",
+                "pt": "msg",
+                "to": "payload.rows[0]['qty_perct']",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 1680,
+        "wires": [
+            [
+                "25041390f82014b6"
+            ]
+        ]
+    },
+    {
+        "id": "c05cd1c837314b2e",
+        "type": "inject",
+        "z": "2acd2581fafa8a7e",
+        "name": "Init empty",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "cfd4c47906617ef8"
+            ]
+        ]
+    },
+    {
+        "id": "cfd4c47906617ef8",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "id_machine_control",
+                "pt": "global",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "status_start_control",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "status_stop_control",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dab14728bffa780f",
+        "type": "inject",
+        "z": "2acd2581fafa8a7e",
+        "name": "Init empty",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 760,
+        "y": 60,
+        "wires": [
+            [
+                "8477506fe7390233",
+                "d9db440a0507ec42"
+            ]
+        ]
+    },
+    {
+        "id": "6d080920506b69e9",
+        "type": "switch",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "property": "id_machine",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 590,
+        "y": 660,
+        "wires": [
+            [
+                "8f8dd14183e2f216"
+            ],
+            [
+                "3f8673a2b2458209",
+                "381f8e8d529c2f3a"
+            ]
+        ]
+    },
+    {
+        "id": "8f8dd14183e2f216",
+        "type": "function",
+        "z": "2acd2581fafa8a7e",
+        "name": "",
+        "func": "\nmsg.payload = \"Please select machine before START\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 600,
+        "wires": [
+            [
+                "7ee6274306a7c5d1",
+                "991f546e7d8471ea"
+            ]
+        ]
+    },
+    {
+        "id": "7ee6274306a7c5d1",
+        "type": "ui_toast",
+        "z": "2acd2581fafa8a7e",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Error",
+        "name": "Error",
+        "x": 870,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "ddb4c06b65891786",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 880,
+        "wires": [
+            [
+                "618c36a41c556a71"
+            ]
+        ]
+    },
+    {
+        "id": "991f546e7d8471ea",
+        "type": "change",
+        "z": "2acd2581fafa8a7e",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 540,
+        "wires": [
+            [
+                "11560a74a887fc2a"
+            ]
+        ]
+    },
+    {
+        "id": "582327bd57abaf11",
+        "type": "inject",
+        "z": "2acd2581fafa8a7e",
+        "name": "Init empty",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "11560a74a887fc2a",
+                "618c36a41c556a71"
+            ]
+        ]
+    }
+]
