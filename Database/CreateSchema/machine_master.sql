@@ -1,0 +1,19 @@
+CREATE TABLE public.machine_master
+(
+    id_machine smallint NOT NULL,
+    machine_name character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    machine_no character varying COLLATE pg_catalog."default" NOT NULL,
+    machine_group character varying(255) COLLATE pg_catalog."default",
+    id_type smallint,
+    ct real,
+    qty_perct integer,
+    status_start boolean,
+    status_stop boolean,
+    last_modified timestamp(6) without time zone DEFAULT now(),
+    CONSTRAINT machine_master_pkey PRIMARY KEY (id_machine, machine_name, machine_no)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.machine_master
+    OWNER to postgres;
