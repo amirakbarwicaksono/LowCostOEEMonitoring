@@ -18,3 +18,5 @@ Requerement:
 - Raspberry Pi as IoT Device
 - Node-Red (End-User), Grafana (Monitoring)
 - Relays in each machine for getting: loading time, stop time, Output, Defect.
+
+amirakbarwicaksono@gmail.com
